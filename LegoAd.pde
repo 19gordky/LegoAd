@@ -54,6 +54,7 @@ dog();
 obelix();
 }
 void draw() {
+  background(255,200,200);
   asterixX += 3;
   asterixY += 2.5;
   dogX += 2.4;
