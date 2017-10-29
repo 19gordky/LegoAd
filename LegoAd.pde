@@ -48,17 +48,22 @@ void obelix() {
 void setup() {
 size(900,600);
 background(255,200,200);
-frameRate(10);
-asterix();
-dog();
-obelix();
 }
 void draw() {
   background(255,200,200);
+  asterix();
+  dog();
+  obelix();
   asterixX += 3;
   asterixY += 2.5;
   dogX += 2.4;
   dogY -= 1.2;
   obelixX -= 2.2;
   obelixY -= 1.2;
+  asterixX = min(-55, asterixX);
+  asterixY = min(0, asterixY);
+  dogX = min(0, dogX);
+  dogY = max(0, dogY);
+  obelixX = max(0, obelixX);
+  obelixY = max(0, obelixY);
 }
